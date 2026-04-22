@@ -21,17 +21,16 @@ entity tb_full_adder is
                 Cout => Cout_tb
             );
             process begin
-                A_tb <= '0', B_tb <= '0', Cin_tb <= '0'; wait for 100ps;
-                A_tb <= '0', B_tb <= '0', Cin_tb <= '1'; wait for 100ps;
-                A_tb <= '0', B_tb <= '1', Cin_tb <= '0'; wait for 100ps;
-                A_tb <= '0', B_tb <= '1', Cin_tb <= '1'; wait for 100ps;
-                A_tb <= '1', B_tb <= '0', Cin_tb <= '0'; wait for 100ps;
-                A_tb <= '1', B_tb <= '0', Cin_tb <= '1'; wait for 100ps;
-                A_tb <= '1', B_tb <= '1', Cin_tb <= '0'; wait for 100ps;
-                A_tb <= '1', B_tb <= '1', Cin_tb <= '1'; wait for 100ps;
+                A_tb <= '0'; B_tb <= '0'; Cin_tb <= '0'; wait for 100ps;
+                A_tb <= '0'; B_tb <= '0'; Cin_tb <= '1'; wait for 100ps;
+                A_tb <= '0'; B_tb <= '1'; Cin_tb <= '0'; wait for 100ps;
+                A_tb <= '0'; B_tb <= '1'; Cin_tb <= '1'; wait for 100ps;
+                A_tb <= '1'; B_tb <= '0'; Cin_tb <= '0'; wait for 100ps;
+                A_tb <= '1'; B_tb <= '0'; Cin_tb <= '1'; wait for 100ps;
+                A_tb <= '1'; B_tb <= '1'; Cin_tb <= '0'; wait for 100ps;
+                A_tb <= '1'; B_tb <= '1'; Cin_tb <= '1'; wait for 100ps;
                 wait;
             end process;
 
     end simulacao;
-
 
