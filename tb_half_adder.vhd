@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity tb_half_adder is
-    end tb_half_adder
+    end tb_half_adder;
     
     architecture simulacao of tb_half_adder is
         component half_adder port (
@@ -21,11 +21,10 @@ begin
     );
 process
 begin
-    A_tb <= '0', B_tb <= '0'; wait for 100ps;
-    A_tb <= '0', B_tb <= '1'; wait for 100ps;
-    A_tb <= '1', B_tb <= '0'; wait for 100ps;
-    A_tb <= '1', B_tb <= '1'; wait for 100ps;
+    A_tb <= '0'; B_tb <= '0'; wait for 100ps;
+    A_tb <= '0'; B_tb <= '1'; wait for 100ps;
+    A_tb <= '1'; B_tb <= '0'; wait for 100ps;
+    A_tb <= '1'; B_tb <= '1'; wait for 100ps;
     wait;
     end process;
 end simulacao;
-
